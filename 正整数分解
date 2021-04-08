@@ -1,0 +1,29 @@
+ //正整数分解
+ //应霖凯 网络工程-1班 202011604322
+ //4月3日
+ //对于while的的理解和使用 
+ #include "stdio.h"
+int main ()
+{
+	int x;
+	int mask=1;
+	printf("请输入一个整数:");
+	scanf("%d",&x);
+	int num=x;    //提前保存变量x ，用于后面求分解 
+	while(x>9){   //利用while循环将输入整数进行倒序 ，并算出输入数字的乘积 
+		x/=10;    
+		mask*=10;
+	}
+	printf("mask=%d\n",mask);
+	do{           
+		int d=num/mask;  //算出x的第一位 
+		printf("%d",d);  //输出输入数字的第一位 
+		if(mask>1){
+			printf(" ");
+		}
+		num%=mask;  //除去x的最高位 ，保留后面的数字 
+		mask/=10;
+	}while(mask>0);  //判断循环的条件 
+	printf("\n");
+	return 0;
+ } 
