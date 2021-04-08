@@ -1,0 +1,18 @@
+#include "stdio.h"
+int main ()
+{
+	int x;
+	int t=0;
+	int g;
+	printf("请输入一个整数："); 
+	scanf("%d",&x);
+while(x>0){
+		g=x%10;
+		x/=10;
+		t=t*10+g;
+	}
+
+	printf("该数求逆后为：%d\n",t);
+	
+	return 0;
+}
