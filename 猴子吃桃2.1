@@ -1,0 +1,28 @@
+//猴子吃桃问题。。项目扩展
+//应霖凯 网络工程-1班 202011604322
+//4月5日 
+
+
+
+# include "stdio.h"
+# include "conio.h"
+int main ()
+{
+	int num=1;
+	int day;
+	printf("请输入第几天桃子剩余一个；"); 
+	scanf("%d",&day);
+	int t;
+	int x;
+	int y;
+	int i;
+	for(i=day;i>1;i--){
+		t=num+1;
+		x=t*t;
+		num=x;
+		printf("第%d天还有%d个桃子\n",i-1,x); 
+		
+	}
+	printf("第一天一共摘了%d个桃子",x);
+	return 0;
+ } 
