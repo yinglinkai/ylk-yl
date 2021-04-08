@@ -1,0 +1,35 @@
+//四则运算
+//应霖凯  网络工程 -1班  202011604322 
+//4月3日 
+//switch-case的使用，结构特点，编写要点 
+# include "stdio.h"
+int main ()
+{
+	float a,b;//存储两个实数 
+	char op;//存储运算符 
+	printf("请输入四则运算表达式");
+	printf("格式为；操作数1 操作符 操作数2\n");
+	scanf("%f%c%f",&a,&op,&b);
+	switch(op){
+		case'+':
+		printf("%.2f+%.2f=%.2f",a,b,a+b);//%.2f表示控制float后面的位数为两位 
+		break;
+		case'-':
+		printf("%.2f*%.2f=%.2f",a,b,a-b);
+		break;
+		case'*':
+		printf("%.2f*%.2f=%.2f",a,b,a*b);
+		break;
+		case'/': 
+		//除数是否为零
+		if(b==0){printf("输入错误。。被除数b不能为零"); 
+		break;
+		} 
+			printf("%.2f/%.2f=%.2f",a,b,a/b);
+			break;
+			default:
+				printf("输入的运算符错误。请重新输入!!");
+				break;	
+	} 
+	return 0;
+}
