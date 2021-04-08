@@ -1,0 +1,24 @@
+
+//猴子吃桃问题
+//应霖凯 网络工程-1班 202011604322
+//4月5日
+//for循环的运用 ，算法的思路（逆循环） 
+# include "stdio.h"
+# include "conio.h"
+int main ()
+{
+int num=1;//最后一天剩一个桃子 
+int day;//第几天剩余一个桃子 
+int x;//设一共x个桃子 
+int i;//定义变量做循环 
+printf("请输入第几天剩余一个桃子；"); 
+scanf("%d",&day);//输入天数 
+for(i=day;i>1;i--){   //注意i的关系以及逆循环 
+	x=(num+1)*2;
+	num=x;
+	printf("第%d天时有%d个桃子\n",i-1,x);
+	
+}
+printf("一共有%d个桃子",x);
+	return 0;
+}
